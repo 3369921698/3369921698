@@ -1,0 +1,41 @@
+
+执行自动输入，可使用-subj选项：
+
+openssl req -newkey rsa:2048 -nodes -keyout vivo.key -x509 -days 365 -out vivo.crt -subj "/C=CN/ST=GD/L=SZ/O=vihoo/OU=dev/CN=vivo.com/emailAddress=yy@vivo.com"
+openssl req -newkey rsa:2048 -nodes -keyout fmuat.key -x509 -days 365 -out fmuat.crt -subj "/C=CN/ST=GD/L=GZ/O=fmuat/OU=fmuat/CN=fmuat.com/emailAddress=fmuat@fmuat.com"
+
+cp ./server.crt ./server.pem
+
+
+手动输入
+# 生成服务器端私钥(无加密)
+openssl genrsa -out server.key 2048
+# 导出服务器端公钥
+openssl rsa -in server.key -pubout -out server.crt
+
+# 手动输入一大堆信息 - 生成csr给CA
+openssl req -new -key server.key -out server.csr
+
+CN
+GuangDong
+GuangZhou
+GuangZhouBaidu
+PHP department
+*.fmuat.com
+gzbaidu@gz.com
+
+
+
+git
+putty
+
+ssh-keygen -t rsa -C "3369921698@qq.com"
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+WinSCP
+puttygen
+--- ssh to putty
+
+
+git config --global user.name "3369921698"
+git config --global user.email "3369921698@qq.com"
