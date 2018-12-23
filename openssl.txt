@@ -55,6 +55,7 @@ git config --global user.name "3369921698"
 git config --global user.email "3369921698@qq.com"
 
 git pull origin master:master
+git push origin master:master
 
 git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。它的完整格式稍稍有点复杂。
 $ git pull <远程主机名> <远程分支名>:<本地分支名>
